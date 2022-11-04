@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.img {
+  background-image: url("./img/marioBKG1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+#gameName {
+  font-family: "Press Start 2P", cursive;
+  font-size: 50px;
+}
+
+#instru {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 10px;
+}
+
+button {
+  height: 40px;
+  width: 90px;
+  background-color: #5c94fc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.showStart {
+  height: 350px;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid black;
+  gap: 25px;
+  border-radius: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+#gameScreen {
+  width: 1500px;
+  height: 500px;
+  border: 1px solid black;
+  background-image: url("./img/BG.png");
+  background-size: 1500px 500px;
+}
+
+#mario {
+  width: 150px;
+  height: 180px;
+  position: relative;
+  top: 245px; /*245px*/
+  left: 100px;
+  background-image: url("./img/mario6.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#canoVerde {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 145px;
+  left: 1400px; /*1400*/
+  animation: canoMov 4s linear infinite;
+  background-image: url("./img/Pipe.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@keyframes canoMov {
+  0% {
+    left: 1400px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes jump {
+  0% {
+    top: 245px; /*chão*/
+  }
+
+  13% {
+    top: 195px;
+  }
+
+  25% {
+    top: 145px;
+  }
+
+  38% {
+    top: 120px;
+  }
+
+  50% {
+    top: 100px; /*mais alto*/
+  }
+
+  63% {
+    top: 120px;
+  }
+
+  75% {
+    top: 145px;
+  }
+
+  87% {
+    top: 195px;
+  }
+
+  100% {
+    top: 245px;
+  }
+}
+
+.jump {
+  animation: jump 1s linear;
+}
+
+#timer {
+  font-size: 20px;
+}
+
+.showAgain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}

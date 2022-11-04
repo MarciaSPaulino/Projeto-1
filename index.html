@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>It's Mario Time!</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bungee+Shade&family=Didact+Gothic&family=Press+Start+2P&family=Rubik+Mono+One&display=swap');
+     </style>
+  </head>
+  <body id="body" class="img">
+    <article>
+      <section id="startScreen" class="showStart">
+        <h1 id="gameName">IT'S MARIO TIME!</h1>
+        <p>
+          <div  id="instru">Instruções: click com o mouse para pular os obstáculos</div>
+        </p>
+        <button id="startBtn">START</button>
+      </section>
+    </article>
+
+    <article>
+      <h1 id="timer" class="hide"></h1>
+    </article>
+
+    <article id="gameScreen" class = "hide" > 
+      <div id="mario"></div>
+      <div id="canoVerde"></div>
+    </article>
+
+    <article id="again" class="hide">
+      <p>DESEJA JOGAR NOVAMENTE?</p>
+      <button id="againBtn">SIM</button>
+      <button id="notAgainBtn">NÃO</button>
+    </article>
+
+    <script src="dom.js"></script>
+    <script src="logic.js"></script>
+
+  </body>
+
+</html>
